@@ -26,7 +26,7 @@ public class Main {
 
         // Verify if the student is enrolled in the course
         ArrayList<Student> enrolled = academicManager.printStudentsInCourse(course.getId());
-        System.out.println("Number of students enrolled in course: " + enrolled.size());
+        System.out.println("Number of students enrolled in " + course.getName() + " " + enrolled.size());
 
     }
 }
