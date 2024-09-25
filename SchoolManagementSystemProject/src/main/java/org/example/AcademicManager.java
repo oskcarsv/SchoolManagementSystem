@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class AcademicManager {
+public class AcademicManager implements AcademicServices {
 
     private ArrayList<Student> students;
     private ArrayList<Course> courses;
@@ -18,27 +18,24 @@ public class AcademicManager {
         this.studentPerCourse = studentPerCourse;
     }
 
-    public ArrayList<Student> getStudents() {
-        return students;
+
+    @Override
+    public void addStudent(Student student) {
+
     }
 
-    public void setStudents(ArrayList<Student> students) {
-        this.students = students;
+    @Override
+    public void addCourse(Course course) {
+
     }
 
-    public ArrayList<Course> getCourses() {
-        return courses;
+    @Override
+    public void enrollStudentInCourse(Student student, int idCourse) throws StudentAlreadyEnrolledException {
+
     }
 
-    public void setCourses(ArrayList<Course> courses) {
-        this.courses = courses;
-    }
+    @Override
+    public void unrollStudentInCourse(int idStudent, int idCourse) throws StudentNotEnrolledException {
 
-    public HashMap<Course, ArrayList<Student>> getStudentPerCourse() {
-        return studentPerCourse;
-    }
-
-    public void setStudentPerCourse(HashMap<Course, ArrayList<Student>> studentPerCourse) {
-        this.studentPerCourse = studentPerCourse;
     }
 }
