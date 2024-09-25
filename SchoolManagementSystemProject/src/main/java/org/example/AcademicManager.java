@@ -74,4 +74,14 @@ public class AcademicManager implements AcademicServices {
             }
         }
     }
+
+    public void printStudentsInCourse(int idCourse) {
+        Course course = getCourseById(idCourse);
+        if (course != null) {
+            ArrayList<Student> studentsList = studentPerCourse.getOrDefault(course, new ArrayList<>());
+            for (Student student : studentsList) {
+                System.out.println(student.getName() + " " + student.getLastName());
+            }
+        }
+    }
 }

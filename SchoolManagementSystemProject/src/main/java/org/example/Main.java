@@ -30,7 +30,7 @@ public class Main {
         }
 
         // Verify if the student is enrolled in the course
-        ArrayList<Student> students = academicManager.getStudentsByCourse(course1);
+        ArrayList<Student> students = academicManager.get
 
 
     }
